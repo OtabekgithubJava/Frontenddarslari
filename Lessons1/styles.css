@@ -1,0 +1,15 @@
+button{
+    background-color: rgb(110, 112, 114);
+    width: 30%;
+    height: 15%;
+    padding: 5%;
+    /* margin: 50%; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+button :hover{
+    cursor: copy;
+    color: blue;
+}
