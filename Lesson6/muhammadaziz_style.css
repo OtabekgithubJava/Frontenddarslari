@@ -1,0 +1,35 @@
+.container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 1700px;
+    height: 1050px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 20%;
+    border: 13px solid teal;
+}
+
+.container button{
+    width: 30%;
+    height: 25%;
+    border-radius: 15%;
+    border: 5px solid black;
+    margin-top: 20%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    color: teal;
+    flex-direction: row-reverse;
+    margin-right: 5%;
+}
+
+.container button:hover{
+    cursor: pointer;
+    width: 32%;
+    border-color: blueviolet;
+    color: cadetblue;
+}
+
+.oybola{
+    display: none;
+}

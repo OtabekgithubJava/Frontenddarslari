@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .vertical-navbar {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            max-width: 200px;
+        }
+
+        .vertical-navbar button {
+            background-color: #4682B4;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .vertical-navbar button:hover {
+            background-color: #5A9;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-navbar">
+        <button>Home</button>
+        <button>About Us</button>
+        <button>Our Products</button>
+        <button>Contact Us</button>
+    </div>
+</body>
+</html>
