@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Card Slider</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f4f4f4;
+    }
+    .container {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      padding: 40px 20px;
+    }
+    .swiper-wrapper {
+      display: flex;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+    .image-content {
+      position: relative;
+      height: 200px;
+      width: 100%;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .card-image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 120px;
+      width: 120px;
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px 15px;
+      text-align: center;
+      background: #fff;
+    }
+    .name {
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #333;
+    }
+    .description {
+      font-size: 1em;
+      color: #666;
+      margin: 10px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background: #444;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #333;
+    }
+    .swiper-pagination-bullet {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container swiper">
+    <div class="swiper-wrapper">
+      <div class="card swiper-slide">
+        <div class="image-content">
+          <span class="overlay"></span>
+          <div class="card-image">
+            <img src="Lesson6/lm10.jpg" alt="Profile 1" class="card-img">
+          </div>
+        </div>
+        <div class="card-content">
+          <h2 class="name">Nuraliyev Mustafo</h2>
+          <p class="description">Dostim</p>
+          <a href="#" class="button">Hello</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="image-content">
+          <span class="overlay"></span>
+          <div class="card-image">
+            <img src="Lesson6/lm10.jpg" alt="Profile 2" class="card-img">
+          </div>
+        </div>
+        <div class="card-content">
+          <h2 class="name">Abdunazarov Muhammaddiyor</h2>
+          <p class="description">.</p>
+          <a href="#" class="button">Dostim</a>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <div class="image-content">
+          <span class="overlay"></span>
+          <div class="card-image">
+            <img src="Lesson6/lm10.jpg" alt="Profile 3" class="card-img">
+          </div>
+        </div>
+        <div class="card-content">
+          <h2 class="name">Mo'ydinjonov Alisher</h2>
+          <p class="description">Mo'ydinjonov Alisher</p>
+          <a href="#" class="button">hello</a>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  </script>
+</body>
+</html>

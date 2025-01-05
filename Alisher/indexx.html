@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <button class="carousel-button prev" onclick="moveLeft()">&lt;</button>
+        <div class="carousel">
+            <div class="card">
+                <img src="designer.jpg" alt="Designer">
+                <span class="tag designer">Designer</span>
+                <h3>Creative Design Solutions</h3>
+            </div>
+            <div class="card">
+                <img src="developer.jpg" alt="Developer">
+                <span class="tag developer">Developer</span>
+                <h3>Innovative Code Practices</h3>
+            </div>
+            <div class="card">
+                <img src="marketer.jpg" alt="Marketer">
+                <span class="tag marketer">Marketer</span>
+                <h3>Effective Marketing Strategies</h3>
+            </div>
+        </div>
+        <button class="carousel-button next" onclick="moveRight()">&gt;</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
